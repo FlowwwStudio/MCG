@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Mon Jul 14 2025 12:41:36 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Tue Oct 07 2025 08:09:38 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="665227f0f5ab9f409773c375" data-wf-site="60e2e9c664000d7cba8314a6">
 <head>
   <meta charset="utf-8">
@@ -26,558 +26,950 @@
   @media screen and (max-width:1920px) { html { font-size: calc(0.625rem + 0.41666666666666674vw); } }
   @media screen and (max-width:1440px) { html { font-size: calc(0.8126951092611863rem + 0.20811654526534862vw); } }
   @media screen and (max-width:479px) { html { font-size: calc(0.7494769874476988rem + 0.8368200836820083vw); } }
-:root {
-	--padding: 2rem 3rem;
-}
-/* Set color style to inherit */
-.inherit-color * {
+  :root {
+    --padding: 2rem 3rem;
+  }
+  /* Set color style to inherit */
+  .inherit-color * {
     color: inherit;
-}
-/* Focus state style for keyboard navigation for the focusable elements */
-*[tabindex]:focus-visible,
+  }
+  /* Focus state style for keyboard navigation for the focusable elements */
+  *[tabindex]:focus-visible,
   input[type="file"]:focus-visible {
-   outline: 0.125rem solid #4d65ff;
-   outline-offset: 0.125rem;
-}
-/* Get rid of top margin on first element in any rich text element */
-.w-richtext > :not(div):first-child, .w-richtext > div:first-child > :first-child {
-  margin-top: 0 !important;
-}
-/* Get rid of bottom margin on last element in any rich text element */
-.w-richtext>:last-child, .w-richtext ol li:last-child, .w-richtext ul li:last-child {
-	margin-bottom: 0 !important;
-}
-/* Prevent all click and hover interaction with an element */
-.pointer-events-off {
-	pointer-events: none;
-}
-/* Enables all click and hover interaction with an element */
-.pointer-events-on {
-  pointer-events: auto;
-}
-/* Create a class of .div-square which maintains a 1:1 dimension of a div */
-.div-square::after {
-	content: "";
-	display: block;
-	padding-bottom: 100%;
-}
-/* Make sure containers never lose their center alignment */
-.container-medium,.container-small, .container-large {
-	margin-right: auto !important;
-  margin-left: auto !important;
-}
-/* 
-Make the following elements inherit typography styles from the parent and not have hardcoded values. 
-Important: You will not be able to style for example "All Links" in Designer with this CSS applied.
-Uncomment this CSS to use it in the project. Leave this message for future hand-off.
-*/
-/*
-a,
-.w-input,
-.w-select,
-.w-tab-link,
-.w-nav-link,
-.w-dropdown-btn,
-.w-dropdown-toggle,
-.w-dropdown-link {
+    outline: 0.125rem solid #4d65ff;
+    outline-offset: 0.125rem;
+  }
+  /* Get rid of top margin on first element in any rich text element */
+  .w-richtext > :not(div):first-child, .w-richtext > div:first-child > :first-child {
+    margin-top: 0 !important;
+  }
+  /* Get rid of bottom margin on last element in any rich text element */
+  .w-richtext>:last-child, .w-richtext ol li:last-child, .w-richtext ul li:last-child {
+    margin-bottom: 0 !important;
+  }
+  /* Prevent all click and hover interaction with an element */
+  .pointer-events-off {
+    pointer-events: none;
+  }
+  /* Enables all click and hover interaction with an element */
+  .pointer-events-on {
+    pointer-events: auto;
+  }
+  /* Create a class of .div-square which maintains a 1:1 dimension of a div */
+  .div-square::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+  /* Make sure containers never lose their center alignment */
+  .container-medium,.container-small, .container-large {
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+  /* 
+  Make the following elements inherit typography styles from the parent and not have hardcoded values. 
+  Important: You will not be able to style for example "All Links" in Designer with this CSS applied.
+  Uncomment this CSS to use it in the project. Leave this message for future hand-off.
+  */
+  /*
+  a,
+  .w-input,
+  .w-select,
+  .w-tab-link,
+  .w-nav-link,
+  .w-dropdown-btn,
+  .w-dropdown-toggle,
+  .w-dropdown-link {
   color: inherit;
   text-decoration: inherit;
   font-size: inherit;
-}
-*/
-/* Apply "..." after 3 lines of text */
-.text-style-3lines {
-	display: -webkit-box;
-	overflow: hidden;
-	-webkit-line-clamp: 3;
-	-webkit-box-orient: vertical;
-}
-/* Apply "..." after 2 lines of text */
-.text-style-2lines {
-	display: -webkit-box;
-	overflow: hidden;
-	-webkit-line-clamp: 2;
-	-webkit-box-orient: vertical;
-}
-/* Adds inline flex display */
-.display-inlineflex {
-  display: inline-flex;
-}
-/* These classes are never overwritten */
-.hide {
-  display: none !important;
-}
-@media screen and (max-width: 991px) {
+  }
+  */
+  /* Apply "..." after 3 lines of text */
+  .text-style-3lines {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+  /* Apply "..." after 2 lines of text */
+  .text-style-2lines {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  /* Adds inline flex display */
+  .display-inlineflex {
+    display: inline-flex;
+  }
+  /* These classes are never overwritten */
+  .hide {
+    display: none !important;
+  }
+  @media screen and (max-width: 991px) {
     .hide, .hide-tablet {
-        display: none !important;
+      display: none !important;
     }
-}
+  }
   @media screen and (max-width: 767px) {
     .hide-mobile-landscape{
       display: none !important;
     }
-}
+  }
   @media screen and (max-width: 479px) {
     .hide-mobile{
       display: none !important;
     }
-}
-.margin-0 {
-  margin: 0rem !important;
-}
-.padding-0 {
-  padding: 0rem !important;
-}
-.spacing-clean {
-padding: 0rem !important;
-margin: 0rem !important;
-}
-.margin-top {
-  margin-right: 0rem !important;
-  margin-bottom: 0rem !important;
-  margin-left: 0rem !important;
-}
-.padding-top {
-  padding-right: 0rem !important;
-  padding-bottom: 0rem !important;
-  padding-left: 0rem !important;
-}
-.margin-right {
-  margin-top: 0rem !important;
-  margin-bottom: 0rem !important;
-  margin-left: 0rem !important;
-}
-.padding-right {
-  padding-top: 0rem !important;
-  padding-bottom: 0rem !important;
-  padding-left: 0rem !important;
-}
-.margin-bottom {
-  margin-top: 0rem !important;
-  margin-right: 0rem !important;
-  margin-left: 0rem !important;
-}
-.padding-bottom {
-  padding-top: 0rem !important;
-  padding-right: 0rem !important;
-  padding-left: 0rem !important;
-}
-.margin-left {
-  margin-top: 0rem !important;
-  margin-right: 0rem !important;
-  margin-bottom: 0rem !important;
-}
-.padding-left {
-  padding-top: 0rem !important;
-  padding-right: 0rem !important;
-  padding-bottom: 0rem !important;
-}
-.margin-horizontal {
-  margin-top: 0rem !important;
-  margin-bottom: 0rem !important;
-}
-.padding-horizontal {
-  padding-top: 0rem !important;
-  padding-bottom: 0rem !important;
-}
-.margin-vertical {
-  margin-right: 0rem !important;
-  margin-left: 0rem !important;
-}
-.padding-vertical {
-  padding-right: 0rem !important;
-  padding-left: 0rem !important;
-}
-/* Apply "..." at 100% width */
-.truncate-width { 
-		width: 100%; 
+  }
+  .margin-0 {
+    margin: 0rem !important;
+  }
+  .padding-0 {
+    padding: 0rem !important;
+  }
+  .spacing-clean {
+    padding: 0rem !important;
+    margin: 0rem !important;
+  }
+  .margin-top {
+    margin-right: 0rem !important;
+    margin-bottom: 0rem !important;
+    margin-left: 0rem !important;
+  }
+  .padding-top {
+    padding-right: 0rem !important;
+    padding-bottom: 0rem !important;
+    padding-left: 0rem !important;
+  }
+  .margin-right {
+    margin-top: 0rem !important;
+    margin-bottom: 0rem !important;
+    margin-left: 0rem !important;
+  }
+  .padding-right {
+    padding-top: 0rem !important;
+    padding-bottom: 0rem !important;
+    padding-left: 0rem !important;
+  }
+  .margin-bottom {
+    margin-top: 0rem !important;
+    margin-right: 0rem !important;
+    margin-left: 0rem !important;
+  }
+  .padding-bottom {
+    padding-top: 0rem !important;
+    padding-right: 0rem !important;
+    padding-left: 0rem !important;
+  }
+  .margin-left {
+    margin-top: 0rem !important;
+    margin-right: 0rem !important;
+    margin-bottom: 0rem !important;
+  }
+  .padding-left {
+    padding-top: 0rem !important;
+    padding-right: 0rem !important;
+    padding-bottom: 0rem !important;
+  }
+  .margin-horizontal {
+    margin-top: 0rem !important;
+    margin-bottom: 0rem !important;
+  }
+  .padding-horizontal {
+    padding-top: 0rem !important;
+    padding-bottom: 0rem !important;
+  }
+  .margin-vertical {
+    margin-right: 0rem !important;
+    margin-left: 0rem !important;
+  }
+  .padding-vertical {
+    padding-right: 0rem !important;
+    padding-left: 0rem !important;
+  }
+  /* Apply "..." at 100% width */
+  .truncate-width { 
+    width: 100%; 
     white-space: nowrap; 
     overflow: hidden; 
     text-overflow: ellipsis; 
-}
-/* Removes native scrollbar */
-.no-scrollbar {
+  }
+  /* Removes native scrollbar */
+  .no-scrollbar {
     -ms-overflow-style: none;
     overflow: -moz-scrollbars-none; 
-}
-.no-scrollbar::-webkit-scrollbar {
+  }
+  .no-scrollbar::-webkit-scrollbar {
     display: none;
-}
-/* Navbar styling */
-.navbar8_menu-right > * {
-	transition: color ease 0.3s;
-  cursor: pointer;
-}
-.navbar8_menu-right > *:hover {
+  }
+  /* Navbar styling */
+  .navbar8_menu-right > * {
+    transition: color ease 0.3s;
+    cursor: pointer;
+  }
+  .navbar8_menu-right > *:hover {
     color: var(--color--red--500);   
-}
-.filters6_filter-group-heading .button.is-link {
-  	text-decoration: underline;
+  }
+  .filters6_filter-group-heading .button.is-link {
+    text-decoration: underline;
     font-weight: 400;
-}
-/* Cart styling */
-.cart-drawer_footer_pricing>li {
-  align-items: center;
-  color: var(--grey--600);
-  display: flex;
-  font-weight: 400;
-  justify-content: space-between;
-  margin-top: 1rem;
-}
-.cart-drawer_footer_pricing>li:first-child {
-	margin-top: 0rem;
-}
-.cart-drawer_footer_pricing>li:last-child {
-	  font-weight: 600;
+  }
+  /* Cart styling */
+  .cart-drawer_footer_pricing>li {
+    align-items: center;
+    color: var(--grey--600);
+    display: flex;
+    font-weight: 400;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+  .cart-drawer_footer_pricing>li:first-child {
+    margin-top: 0rem;
+  }
+  .cart-drawer_footer_pricing>li:last-child {
+    font-weight: 600;
     font-size: 1.25rem;
     color: var(--grey--900);
-}
-.w-select {
-  -webkit-appearance: none;
-  -moz-appearance: none; 
-  background-size: auto 12px;
-  background-position: 95% 50% !important;
-  background-repeat: no-repeat !important;
-  background-image: url("https://uploads-ssl.webflow.com/60e2e9c664000d7cba8314a6/6655a5a94ece9e03e60e706c_Tailless-Line-Arrow-Down-1--Streamline-Core.svg") !important; 
-  padding-right: min(1.5rem, 2rem) !important;
-}
-/* ––– Navbar ––– */
-@container (width <= 100rem){
-	.navbar.is-mobile {
-  	display: flex;
   }
-  .navbar.is-desktop {
-  	display: none;
+  .w-select {
+    -webkit-appearance: none;
+    -moz-appearance: none; 
+    background-size: auto 12px;
+    background-position: 95% 50% !important;
+    background-repeat: no-repeat !important;
+    background-image: url("https://uploads-ssl.webflow.com/60e2e9c664000d7cba8314a6/6655a5a94ece9e03e60e706c_Tailless-Line-Arrow-Down-1--Streamline-Core.svg") !important; 
+    padding-right: min(1.5rem, 2rem) !important;
   }
-}
+  /*––– Loading –––*/
+  /* Skeleton Loading Animation */
+  [data-loading="true"] {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--grey--100, #f5f5f5);
+    color: transparent !important;
+    pointer-events: none;
+    user-select: none;
+    border-radius: var(--border--radius--primary, 3px);
+  }
+  [data-loading="true"] * {
+    visibility: hidden;
+  }
+  [data-loading="true"]::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      var(--grey--200, #e5e5e5) 20%,
+      var(--grey--300, #d6d6d6) 50%,
+      var(--grey--200, #e5e5e5) 80%,
+      transparent 100%
+    );
+    background-size: 200% 100%;
+    animation: skeleton-shimmer 1.5s ease-in-out infinite;
+  }
+  @keyframes skeleton-shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+  [data-loading="true"][data-skeleton="text"] {
+    height: 1em;
+    border-radius: 4px;
+  }
+  [data-loading="true"][data-skeleton="circle"] {
+    border-radius: 50%;
+  }
+  .button.is-loading::after {
+    content:"";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("https://cdn.prod.website-files.com/60e2e9c664000d7cba8314a6/68e4b7926c5536c636b18e03_Rolling%401x-1.0s-200px-200px.svg");
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: var(--color--red--700);
+  }
+  /* ––– Navbar ––– */
+  @container (width <= 50rem){
+    .navbar.is-mobile {
+      display: flex;
+    }
+    .navbar.is-desktop {
+      display: none;
+    }
+  }
 </style>
     </div>
-    <div data-animation="default" class="navbar w-nav" data-easing2="ease" fs-scrolldisable-element="smart-nav" data-easing="ease" data-collapse="medium" data-w-id="482de160-3b70-dd73-406e-61821a822981" role="banner" data-duration="400">
-      <div class="navbar_container">
-        <a href="index.html" class="navbar_logo-link w-nav-brand"><img src="images/MCG-logo-Positive.svg" loading="lazy" alt="" class="navbar_logo"></a>
-        <nav role="navigation" class="navbar_menu w-nav-menu">
-          <div class="navbar_menu-left">
-            <a href="#" class="navbar_link w-nav-link">Link One</a>
-            <a href="#" class="navbar_link w-nav-link">Link Two</a>
-            <a href="#" class="navbar_link w-nav-link">Link Three</a>
-            <div data-hover="true" data-delay="300" data-w-id="482de160-3b70-dd73-406e-61821a82298d" class="navbar_menu-dropdown w-dropdown">
-              <div class="navbar_dropdown-toggle w-dropdown-toggle">
-                <div>Link Four</div>
-                <div class="dropdown-chevron w-embed"><svg width=" 100%" height=" 100%" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.55806 6.29544C2.46043 6.19781 2.46043 6.03952 2.55806 5.94189L3.44195 5.058C3.53958 4.96037 3.69787 4.96037 3.7955 5.058L8.00001 9.26251L12.2045 5.058C12.3021 4.96037 12.4604 4.96037 12.5581 5.058L13.4419 5.94189C13.5396 6.03952 13.5396 6.19781 13.4419 6.29544L8.17678 11.5606C8.07915 11.6582 7.92086 11.6582 7.82323 11.5606L2.55806 6.29544Z" fill="currentColor"></path>
-                  </svg></div>
-              </div>
-              <nav class="navbar_dropdown-list w-dropdown-list">
-                <div class="navbar_container">
-                  <div class="navbar_dropdown-content">
-                    <div class="navbar_dropdown-content-left">
-                      <div class="navbar_dropdown-link-list">
-                        <h4 class="text-size-small text-weight-semibold">Page group one</h4>
-                        <a href="#" class="navbar_dropdown-link w-inline-block">
-                          <div class="navbar_icon-holder">
-                            <div class="icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
-                              </svg></div>
-                          </div>
-                          <div class="navbar_item-text">
-                            <div class="text-weight-semibold">Page One</div>
-                            <p class="text-size-small hide-mobile-landscape">Lorem ipsum dolor sit amet consectetur elit</p>
-                          </div>
-                        </a>
-                        <a href="#" class="navbar_dropdown-link w-inline-block">
-                          <div class="navbar_icon-holder">
-                            <div class="icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
-                              </svg></div>
-                          </div>
-                          <div class="navbar_item-text">
-                            <div class="text-weight-semibold">Page Two</div>
-                            <p class="text-size-small hide-mobile-landscape">Lorem ipsum dolor sit amet consectetur elit</p>
-                          </div>
-                        </a>
-                        <a href="#" class="navbar_dropdown-link w-inline-block">
-                          <div class="navbar_icon-holder">
-                            <div class="icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
-                              </svg></div>
-                          </div>
-                          <div class="navbar_item-text">
-                            <div class="text-weight-semibold">Page Three</div>
-                            <p class="text-size-small hide-mobile-landscape">Lorem ipsum dolor sit amet consectetur elit</p>
-                          </div>
-                        </a>
-                        <a href="#" class="navbar_dropdown-link w-inline-block">
-                          <div class="navbar_icon-holder">
-                            <div class="icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
-                              </svg></div>
-                          </div>
-                          <div class="navbar_item-text">
-                            <div class="text-weight-semibold">Page Four</div>
-                            <p class="text-size-small hide-mobile-landscape">Lorem ipsum dolor sit amet consectetur elit</p>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="navbar_dropdown-link-list">
-                        <h4 class="text-size-small text-weight-semibold">Page group two</h4>
-                        <a href="#" class="navbar_dropdown-link w-inline-block">
-                          <div class="navbar_icon-holder">
-                            <div class="icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
-                              </svg></div>
-                          </div>
-                          <div class="navbar_item-text">
-                            <div class="text-weight-semibold">Page Five</div>
-                            <p class="text-size-small hide-mobile-landscape">Lorem ipsum dolor sit amet consectetur elit</p>
-                          </div>
-                        </a>
-                        <a href="#" class="navbar_dropdown-link w-inline-block">
-                          <div class="navbar_icon-holder">
-                            <div class="icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
-                              </svg></div>
-                          </div>
-                          <div class="navbar_item-text">
-                            <div class="text-weight-semibold">Page Six</div>
-                            <p class="text-size-small hide-mobile-landscape">Lorem ipsum dolor sit amet consectetur elit</p>
-                          </div>
-                        </a>
-                        <a href="#" class="navbar_dropdown-link w-inline-block">
-                          <div class="navbar_icon-holder">
-                            <div class="icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
-                              </svg></div>
-                          </div>
-                          <div class="navbar_item-text">
-                            <div class="text-weight-semibold">Page Seven</div>
-                            <p class="text-size-small hide-mobile-landscape">Lorem ipsum dolor sit amet consectetur elit</p>
-                          </div>
-                        </a>
-                        <a href="#" class="navbar_dropdown-link w-inline-block">
-                          <div class="navbar_icon-holder">
-                            <div class="icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
-                              </svg></div>
-                          </div>
-                          <div class="navbar_item-text">
-                            <div class="text-weight-semibold">Page Eight</div>
-                            <p class="text-size-small hide-mobile-landscape">Lorem ipsum dolor sit amet consectetur elit</p>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="navbar_dropdown-link-list">
-                        <h4 class="text-size-small text-weight-semibold">Page group three</h4>
-                        <a id="w-node-_482de160-3b70-dd73-406e-61821a8229df-1a822981" href="#" class="navbar_dropdown-link w-inline-block">
-                          <div class="navbar_icon-holder">
-                            <div class="icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
-                              </svg></div>
-                          </div>
-                          <div class="navbar_item-text">
-                            <div class="text-weight-semibold">Page Nine</div>
-                            <p class="text-size-small hide-mobile-landscape">Lorem ipsum dolor sit amet consectetur elit</p>
-                          </div>
-                        </a>
-                        <a href="#" class="navbar_dropdown-link w-inline-block">
-                          <div class="navbar_icon-holder">
-                            <div class="icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
-                              </svg></div>
-                          </div>
-                          <div class="navbar_item-text">
-                            <div class="text-weight-semibold">Page Ten</div>
-                            <p class="text-size-small hide-mobile-landscape">Lorem ipsum dolor sit amet consectetur elit</p>
-                          </div>
-                        </a>
-                        <a href="#" class="navbar_dropdown-link w-inline-block">
-                          <div class="navbar_icon-holder">
-                            <div class="icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
-                              </svg></div>
-                          </div>
-                          <div class="navbar_item-text">
-                            <div class="text-weight-semibold">Page Eleven</div>
-                            <p class="text-size-small hide-mobile-landscape">Lorem ipsum dolor sit amet consectetur elit</p>
-                          </div>
-                        </a>
-                        <a href="#" class="navbar_dropdown-link w-inline-block">
-                          <div class="navbar_icon-holder">
-                            <div class="icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
-                              </svg></div>
-                          </div>
-                          <div class="navbar_item-text">
-                            <div class="text-weight-semibold">Page Twelve</div>
-                            <p class="text-size-small hide-mobile-landscape">Lorem ipsum dolor sit amet consectetur elit</p>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="navbar_dropdown-content-right">
-                      <div class="navbar_dropdown-content-wrapper z-index-1">
-                        <div class="navbar_dropdown-small-link-list">
-                          <h4 class="text-size-small text-weight-semibold">Page group four</h4>
+    <div class="navbar_wrapper">
+      <div data-animation="default" data-collapse="none" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar is-desktop w-nav">
+        <div class="navbar_container">
+          <a href="index.html" class="navbar_logo-link w-nav-brand"><img loading="lazy" src="images/MCG-logo-Positive.svg" alt="" class="navbar_logo"></a>
+          <nav role="navigation" class="navbar_menu w-nav-menu">
+            <div class="navbar_menu-left">
+              <a href="#" class="navbar_link w-nav-link">Link One</a>
+              <a href="#" class="navbar_link w-nav-link">Link Two</a>
+              <a href="#" class="navbar_link w-nav-link">Link Three</a>
+              <div data-delay="300" data-hover="true" class="navbar_menu-dropdown w-dropdown">
+                <div class="navbar_dropdown-toggle w-dropdown-toggle">
+                  <div>Link Four</div>
+                  <div class="dropdown-chevron w-embed"><svg width=" 100%" height=" 100%" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M2.55806 6.29544C2.46043 6.19781 2.46043 6.03952 2.55806 5.94189L3.44195 5.058C3.53958 4.96037 3.69787 4.96037 3.7955 5.058L8.00001 9.26251L12.2045 5.058C12.3021 4.96037 12.4604 4.96037 12.5581 5.058L13.4419 5.94189C13.5396 6.03952 13.5396 6.19781 13.4419 6.29544L8.17678 11.5606C8.07915 11.6582 7.92086 11.6582 7.82323 11.5606L2.55806 6.29544Z" fill="currentColor"></path>
+                    </svg></div>
+                </div>
+                <nav class="navbar_dropdown-list w-dropdown-list">
+                  <div class="navbar_container">
+                    <div class="navbar_dropdown-content">
+                      <div class="navbar_dropdown-content-left">
+                        <div class="navbar_dropdown-link-list">
+                          <h4 class="text-size-small text-weight-semibold">Page group one</h4>
+                          <a href="#" class="navbar_dropdown-link w-inline-block">
+                            <div class="navbar_icon-holder">
+                              <div class="icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                                </svg></div>
+                            </div>
+                            <div class="navbar_item-text">
+                              <div class="text-weight-semibold">Page One</div>
+                              <p class="text-size-small hide-mobile-landscape">Lorem ipsum dolor sit amet consectetur elit</p>
+                            </div>
+                          </a>
+                          <a href="#" class="navbar_dropdown-link w-inline-block">
+                            <div class="navbar_icon-holder">
+                              <div class="icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                                </svg></div>
+                            </div>
+                            <div class="navbar_item-text">
+                              <div class="text-weight-semibold">Page Two</div>
+                              <p class="text-size-small hide-mobile-landscape">Lorem ipsum dolor sit amet consectetur elit</p>
+                            </div>
+                          </a>
+                          <a href="#" class="navbar_dropdown-link w-inline-block">
+                            <div class="navbar_icon-holder">
+                              <div class="icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                                </svg></div>
+                            </div>
+                            <div class="navbar_item-text">
+                              <div class="text-weight-semibold">Page Three</div>
+                              <p class="text-size-small hide-mobile-landscape">Lorem ipsum dolor sit amet consectetur elit</p>
+                            </div>
+                          </a>
+                          <a href="#" class="navbar_dropdown-link w-inline-block">
+                            <div class="navbar_icon-holder">
+                              <div class="icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                                </svg></div>
+                            </div>
+                            <div class="navbar_item-text">
+                              <div class="text-weight-semibold">Page Four</div>
+                              <p class="text-size-small hide-mobile-landscape">Lorem ipsum dolor sit amet consectetur elit</p>
+                            </div>
+                          </a>
                         </div>
-                        <a href="#" class="navbar_dropdown-link-small">Link one</a>
-                        <a href="#" class="navbar_dropdown-link-small">Link two</a>
-                        <a href="#" class="navbar_dropdown-link-small">Link three</a>
-                        <a href="#" class="navbar_dropdown-link-small">Link four</a>
-                        <a href="#" class="navbar_dropdown-link-small">Link five</a>
+                        <div class="navbar_dropdown-link-list">
+                          <h4 class="text-size-small text-weight-semibold">Page group two</h4>
+                          <a href="#" class="navbar_dropdown-link w-inline-block">
+                            <div class="navbar_icon-holder">
+                              <div class="icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                                </svg></div>
+                            </div>
+                            <div class="navbar_item-text">
+                              <div class="text-weight-semibold">Page Five</div>
+                              <p class="text-size-small hide-mobile-landscape">Lorem ipsum dolor sit amet consectetur elit</p>
+                            </div>
+                          </a>
+                          <a href="#" class="navbar_dropdown-link w-inline-block">
+                            <div class="navbar_icon-holder">
+                              <div class="icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                                </svg></div>
+                            </div>
+                            <div class="navbar_item-text">
+                              <div class="text-weight-semibold">Page Six</div>
+                              <p class="text-size-small hide-mobile-landscape">Lorem ipsum dolor sit amet consectetur elit</p>
+                            </div>
+                          </a>
+                          <a href="#" class="navbar_dropdown-link w-inline-block">
+                            <div class="navbar_icon-holder">
+                              <div class="icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                                </svg></div>
+                            </div>
+                            <div class="navbar_item-text">
+                              <div class="text-weight-semibold">Page Seven</div>
+                              <p class="text-size-small hide-mobile-landscape">Lorem ipsum dolor sit amet consectetur elit</p>
+                            </div>
+                          </a>
+                          <a href="#" class="navbar_dropdown-link w-inline-block">
+                            <div class="navbar_icon-holder">
+                              <div class="icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                                </svg></div>
+                            </div>
+                            <div class="navbar_item-text">
+                              <div class="text-weight-semibold">Page Eight</div>
+                              <p class="text-size-small hide-mobile-landscape">Lorem ipsum dolor sit amet consectetur elit</p>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="navbar_dropdown-link-list">
+                          <h4 class="text-size-small text-weight-semibold">Page group three</h4>
+                          <a id="w-node-d7f45653-3f27-de3d-c288-4ded405340f8-40534099" href="#" class="navbar_dropdown-link w-inline-block">
+                            <div class="navbar_icon-holder">
+                              <div class="icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                                </svg></div>
+                            </div>
+                            <div class="navbar_item-text">
+                              <div class="text-weight-semibold">Page Nine</div>
+                              <p class="text-size-small hide-mobile-landscape">Lorem ipsum dolor sit amet consectetur elit</p>
+                            </div>
+                          </a>
+                          <a href="#" class="navbar_dropdown-link w-inline-block">
+                            <div class="navbar_icon-holder">
+                              <div class="icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                                </svg></div>
+                            </div>
+                            <div class="navbar_item-text">
+                              <div class="text-weight-semibold">Page Ten</div>
+                              <p class="text-size-small hide-mobile-landscape">Lorem ipsum dolor sit amet consectetur elit</p>
+                            </div>
+                          </a>
+                          <a href="#" class="navbar_dropdown-link w-inline-block">
+                            <div class="navbar_icon-holder">
+                              <div class="icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                                </svg></div>
+                            </div>
+                            <div class="navbar_item-text">
+                              <div class="text-weight-semibold">Page Eleven</div>
+                              <p class="text-size-small hide-mobile-landscape">Lorem ipsum dolor sit amet consectetur elit</p>
+                            </div>
+                          </a>
+                          <a href="#" class="navbar_dropdown-link w-inline-block">
+                            <div class="navbar_icon-holder">
+                              <div class="icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                                </svg></div>
+                            </div>
+                            <div class="navbar_item-text">
+                              <div class="text-weight-semibold">Page Twelve</div>
+                              <p class="text-size-small hide-mobile-landscape">Lorem ipsum dolor sit amet consectetur elit</p>
+                            </div>
+                          </a>
+                        </div>
                       </div>
-                      <div class="navbar_dropdown-background-layer"></div>
+                      <div class="navbar_dropdown-content-right">
+                        <div class="navbar_dropdown-content-wrapper z-index-1">
+                          <div class="navbar_dropdown-small-link-list">
+                            <h4 class="text-size-small text-weight-semibold">Page group four</h4>
+                          </div>
+                          <a href="#" class="navbar_dropdown-link-small">Link one</a>
+                          <a href="#" class="navbar_dropdown-link-small">Link two</a>
+                          <a href="#" class="navbar_dropdown-link-small">Link three</a>
+                          <a href="#" class="navbar_dropdown-link-small">Link four</a>
+                          <a href="#" class="navbar_dropdown-link-small">Link five</a>
+                        </div>
+                        <div class="navbar_dropdown-background-layer"></div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </nav>
+                </nav>
+              </div>
             </div>
-          </div>
-          <div class="navbar_menu-right">
-            <div class="margin-0 w-form">
-              <form id="wf-form-Car-selector-search" name="wf-form-Car-selector-search" data-name="Car selector search" method="get" data-wf-page-id="665227f0f5ab9f409773c375" data-wf-element-id="8d79ffce-f19b-1174-a02b-2635b13da1da">
-                <div class="navbar_menu_button-wrapper">
-                  <div data-car-selector="trigger" class="navbar_menu-filters-button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="-0.5 -0.5 24 24" id="Car-2--Streamline-Sharp" width="100%" class="icon-1x1-xsmall">
-                      <desc></desc>
-                      <g id="car-2--transportation-travel-transport-car">
+            <div class="navbar_menu-right">
+              <div data-hover="false" data-delay="0" class="language-dropdown w-dropdown">
+                <div class="language_toggle w-dropdown-toggle">
+                  <div lang="da">Da</div>
+                </div>
+                <nav lang="en" class="language_list w-dropdown-list">
+                  <a href="#" class="language_link w-dropdown-link">En</a>
+                </nav>
+              </div>
+              <div class="margin-0 w-form">
+                <form id="wf-form-Car-selector-search" name="wf-form-Car-selector-search" data-name="Car selector search" method="get" data-wf-page-id="665227f0f5ab9f409773c375" data-wf-element-id="d7f45653-3f27-de3d-c288-4ded4053412a">
+                  <div class="navbar_menu_button-wrapper">
+                    <div data-car-selector="trigger" class="navbar_menu-filters-button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="-0.5 -0.5 24 24" id="Car-2--Streamline-Sharp" width="100%" class="icon-nav">
                         <path id="Vector 3150" stroke="currentColor" d="M0.9583333333333334 18.208333333333336v-7.666666666666667h21.083333333333336v7.666666666666667H0.9583333333333334Z" stroke-width="2"></path>
                         <path id="Vector 3151" stroke="currentColor" d="m4.791666666666667 2.875 -1.9166666666666667 7.666666666666667h17.25l-1.9166666666666667 -7.666666666666667H4.791666666666667Z" stroke-width="2"></path>
                         <path id="Vector 3152" stroke="currentColor" d="M3.8333333333333335 14.375h2.875" stroke-width="2"></path>
                         <path id="Vector 3155" stroke="currentColor" d="M19.166666666666668 14.375h-2.875" stroke-width="2"></path>
                         <path id="Vector 3154" stroke="currentColor" d="M2.875 18.208333333333336v2.875" stroke-width="2"></path>
                         <path id="Vector 3156" stroke="currentColor" d="M20.125 18.208333333333336v2.875" stroke-width="2"></path>
-                      </g>
-                    </svg></div>
-                  <div data-car-selector="modal" class="navbar_menu_filters-modal">
-                    <div class="filters6_form-header">
-                      <div class="filters6_heading">Filters</div>
-                      <a data-car-selector="close" href="#" class="filters6_modal-close-button w-inline-block"><img alt="" src="images/icon_close-modal.svg" class="filters6_modal-close-icon"></a>
+                      </svg></div>
+                    <div data-car-selector="modal" class="navbar_menu_filters-modal">
+                      <div class="filters6_form-header">
+                        <div class="filters6_heading">Filters</div>
+                        <a data-car-selector="close" href="#" class="filters6_modal-close-button w-inline-block"><img alt="" src="images/icon_close-modal.svg" class="filters6_modal-close-icon"></a>
+                      </div>
+                      <div class="filters6_filter-group-list">
+                        <div class="filters6_filter-group">
+                          <div class="filters6_filter-group-heading">
+                            <div>Årgang</div>
+                            <a fs-cmsfilter-field="IDENTIFIER" fs-cmsfilter-element="reset" href="#" class="button is-link w-inline-block">
+                              <div>Ryd</div>
+                            </a>
+                          </div>
+                          <div class="filters6_filter-options">
+                            <div class="filters6_list-wrapper">
+                              <div class="filters6_list">
+                                <div class="filters6_item"><select id="field-2" name="field-2" data-name="Field 2" fs-cmsfilter-field="IDENTIFIER" class="form_input is-select-input w-select">
+                                    <option value="">Vælg årgang</option>
+                                    <option value="Option One">Option One</option>
+                                    <option value="Option Two">Option Two</option>
+                                    <option value="Option Three">Option Three</option>
+                                  </select></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="filters6_filter-group">
+                          <div class="filters6_filter-group-heading">
+                            <div>Mærke</div>
+                            <a fs-cmsfilter-field="IDENTIFIER" fs-cmsfilter-element="reset" href="#" class="button is-link w-inline-block">
+                              <div>Ryd</div>
+                            </a>
+                          </div>
+                          <div class="filters6_filter-options">
+                            <div class="filters6_list-wrapper">
+                              <div class="filters6_list">
+                                <div class="filters6_item"><select id="field-2" name="field-2" data-name="Field 2" fs-cmsfilter-field="IDENTIFIER" class="form_input is-select-input w-select">
+                                    <option value="">Vælg mærke</option>
+                                    <option value="Option One">Option One</option>
+                                    <option value="Option Two">Option Two</option>
+                                    <option value="Option Three">Option Three</option>
+                                  </select></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="filters6_filter-group">
+                          <div class="filters6_filter-group-heading">
+                            <div>Model</div>
+                            <a fs-cmsfilter-field="IDENTIFIER" fs-cmsfilter-element="reset" href="#" class="button is-link w-inline-block">
+                              <div>Ryd</div>
+                            </a>
+                          </div>
+                          <div class="filters6_filter-options">
+                            <div class="filters6_list-wrapper">
+                              <div class="filters6_list">
+                                <div class="filters6_item"><select id="field-2" name="field-2" data-name="Field 2" fs-cmsfilter-field="IDENTIFIER" class="form_input is-select-input w-select">
+                                    <option value="">Vælg model</option>
+                                    <option value="Option One">Option One</option>
+                                    <option value="Option Two">Option Two</option>
+                                    <option value="Option Three">Option Three</option>
+                                  </select></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="filters6_filter-group last">
+                          <div class="filters6_filter-group-heading">
+                            <div>Udgave</div>
+                            <a fs-cmsfilter-field="IDENTIFIER" fs-cmsfilter-element="reset" href="#" class="button is-link w-inline-block">
+                              <div>Ryd</div>
+                            </a>
+                          </div>
+                          <div class="filters6_filter-options">
+                            <div class="filters6_list-wrapper">
+                              <div class="filters6_list">
+                                <div class="filters6_item"><select id="field-2" name="field-2" data-name="Field 2" fs-cmsfilter-field="IDENTIFIER" class="form_input is-select-input w-select">
+                                    <option value="">Vælg udgave</option>
+                                    <option value="Option One">Option One</option>
+                                    <option value="Option Two">Option Two</option>
+                                    <option value="Option Three">Option Three</option>
+                                  </select></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="filters6_modal-menu">
+                        <a fs-cmsfilter-element="reset" href="#" class="button is-link w-inline-block">
+                          <div>Ryd alle</div>
+                        </a><input type="submit" data-wait="" class="button is-small w-button" value="Søg">
+                      </div>
                     </div>
-                    <div class="filters6_filter-group-list">
-                      <div class="filters6_filter-group">
-                        <div class="filters6_filter-group-heading">
-                          <div>Årgang</div>
-                          <a fs-cmsfilter-field="IDENTIFIER" fs-cmsfilter-element="reset" href="#" class="button is-link w-inline-block">
-                            <div>Ryd</div>
-                          </a>
-                        </div>
-                        <div class="filters6_filter-options">
-                          <div class="filters6_list-wrapper">
-                            <div class="filters6_list">
-                              <div class="filters6_item"><select id="field-2" name="field-2" data-name="Field 2" fs-cmsfilter-field="IDENTIFIER" class="form_input is-select-input w-select">
-                                  <option value="">Vælg årgang</option>
-                                  <option value="Option One">Option One</option>
-                                  <option value="Option Two">Option Two</option>
-                                  <option value="Option Three">Option Three</option>
-                                </select></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="filters6_filter-group">
-                        <div class="filters6_filter-group-heading">
-                          <div>Mærke</div>
-                          <a fs-cmsfilter-field="IDENTIFIER" fs-cmsfilter-element="reset" href="#" class="button is-link w-inline-block">
-                            <div>Ryd</div>
-                          </a>
-                        </div>
-                        <div class="filters6_filter-options">
-                          <div class="filters6_list-wrapper">
-                            <div class="filters6_list">
-                              <div class="filters6_item"><select id="field-2" name="field-2" data-name="Field 2" fs-cmsfilter-field="IDENTIFIER" class="form_input is-select-input w-select">
-                                  <option value="">Vælg mærke</option>
-                                  <option value="Option One">Option One</option>
-                                  <option value="Option Two">Option Two</option>
-                                  <option value="Option Three">Option Three</option>
-                                </select></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="filters6_filter-group">
-                        <div class="filters6_filter-group-heading">
-                          <div>Model</div>
-                          <a fs-cmsfilter-field="IDENTIFIER" fs-cmsfilter-element="reset" href="#" class="button is-link w-inline-block">
-                            <div>Ryd</div>
-                          </a>
-                        </div>
-                        <div class="filters6_filter-options">
-                          <div class="filters6_list-wrapper">
-                            <div class="filters6_list">
-                              <div class="filters6_item"><select id="field-2" name="field-2" data-name="Field 2" fs-cmsfilter-field="IDENTIFIER" class="form_input is-select-input w-select">
-                                  <option value="">Vælg model</option>
-                                  <option value="Option One">Option One</option>
-                                  <option value="Option Two">Option Two</option>
-                                  <option value="Option Three">Option Three</option>
-                                </select></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="filters6_filter-group last">
-                        <div class="filters6_filter-group-heading">
-                          <div>Udgave</div>
-                          <a fs-cmsfilter-field="IDENTIFIER" fs-cmsfilter-element="reset" href="#" class="button is-link w-inline-block">
-                            <div>Ryd</div>
-                          </a>
-                        </div>
-                        <div class="filters6_filter-options">
-                          <div class="filters6_list-wrapper">
-                            <div class="filters6_list">
-                              <div class="filters6_item"><select id="field-2" name="field-2" data-name="Field 2" fs-cmsfilter-field="IDENTIFIER" class="form_input is-select-input w-select">
-                                  <option value="">Vælg udgave</option>
-                                  <option value="Option One">Option One</option>
-                                  <option value="Option Two">Option Two</option>
-                                  <option value="Option Three">Option Three</option>
-                                </select></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="filters6_modal-menu">
-                      <a fs-cmsfilter-element="reset" href="#" class="button is-link w-inline-block">
-                        <div>Ryd alle</div>
-                      </a><input type="submit" data-wait="" data-w-id="31927ac3-a9f5-b94d-776a-97fbc9758b3c" class="button is-small w-button" value="Søg">
-                    </div>
+                    <div data-car-selector="overlay" class="navbar_menu-modal-background"></div>
                   </div>
-                  <div data-car-selector="overlay" class="navbar_menu-modal-background"></div>
+                </form>
+                <div class="w-form-done">
+                  <div>Thank you! Your submission has been received!</div>
                 </div>
-              </form>
-              <div class="w-form-done">
-                <div>Thank you! Your submission has been received!</div>
-              </div>
-              <div class="w-form-fail">
-                <div>Oops! Something went wrong while submitting the form.</div>
-              </div>
-            </div><button data-search="trigger" class="navbar_menu-search-button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" id="Magnifying-Glass--Streamline-Sharp" width="100%" class="icon-1x1-xsmall">
-                <desc></desc>
-                <g id="magnifying-glass--glass-search-magnifying">
+                <div class="w-form-fail">
+                  <div>Oops! Something went wrong while submitting the form.</div>
+                </div>
+              </div><button data-search="trigger" class="navbar_menu-search-button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" id="Magnifying-Glass--Streamline-Sharp" width="100%" class="icon-nav">
                   <path id="Ellipse 7" stroke="currentColor" d="M1 11c0 2.6522 1.05357 5.1957 2.92893 7.0711C5.8043 19.9464 8.34784 21 11 21c2.6522 0 5.1957 -1.0536 7.0711 -2.9289C19.9464 16.1957 21 13.6522 21 11c0 -2.65216 -1.0536 -5.1957 -2.9289 -7.07107C16.1957 2.05357 13.6522 1 11 1 8.34784 1 5.8043 2.05357 3.92893 3.92893 2.05357 5.8043 1 8.34784 1 11Z" stroke-width="2"></path>
                   <path id="Vector 196" stroke="currentColor" d="m18 18 5 5" stroke-width="2"></path>
-                </g>
-              </svg></button><button class="navbar_menu_cart-button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" id="Shopping-Basket-2--Streamline-Sharp" width="100%" class="icon-1x1-xsmall">
-                <desc></desc>
-                <g id="shopping-basket-2--shopping-basket">
+                </svg></button><button class="navbar_menu_cart-button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" id="Shopping-Basket-2--Streamline-Sharp" width="100%" class="icon-nav">
                   <path id="Vector 2660" stroke="currentColor" d="M3.9818 22.1564L1.3091 10.3964H22.6909L20.0182 22.1564H3.9818Z" stroke-width="2"></path>
                   <path id="Vector 2666" stroke="currentColor" d="M4.5164 10.3964L8.7927 1.8436" stroke-width="2"></path>
                   <path id="Vector 2667" stroke="currentColor" d="M19.4836 10.3964L15.2073 1.8436" stroke-width="2"></path>
-                </g>
-              </svg></button>
-          </div>
-        </nav>
-        <div class="navbar_menu-button w-nav-button">
-          <div class="menu-icon">
-            <div class="menu-icon_line-top"></div>
-            <div class="menu-icon_line-middle">
-              <div class="menu-icon_line-middle-inner"></div>
+                </svg>
+                <div class="badge is-cart">2</div>
+              </button>
             </div>
-            <div class="menu-icon_line-bottom"></div>
+          </nav>
+          <div class="navbar_menu-button w-nav-button">
+            <div class="menu-icon">
+              <div class="menu-icon_line-top"></div>
+              <div class="menu-icon_line-middle">
+                <div class="menu-icon_line-middle-inner"></div>
+              </div>
+              <div class="menu-icon_line-bottom"></div>
+            </div>
           </div>
         </div>
+        <form action="/search" data-search="component" class="navbar_search-component w-form">
+          <div data-search="input" class="navbar_search_container"><input class="navbar_search_input w-input" autofocus="true" maxlength="256" name="query" placeholder="Find alting" type="search" id="search" required=""><input type="submit" class="navbar_search_button w-button" value="Søg"></div>
+          <div data-search="overlay" class="navbar_search_overlay"></div>
+        </form>
       </div>
-      <form action="/search" data-search="component" class="navbar_search-component w-form">
-        <div data-search="input" class="navbar_search_container"><input class="navbar_search_input w-input" autofocus="true" maxlength="256" name="query" placeholder="Find alting" type="search" id="search" required=""><input type="submit" class="navbar_search_button w-button" value="Søg"></div>
-        <div data-search="overlay" class="navbar_search_overlay"></div>
-      </form>
+      <div data-animation="default" data-collapse="all" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar is-mobile w-nav">
+        <div class="navbar_container">
+          <a href="index.html" class="navbar_logo-link w-nav-brand"><img loading="lazy" src="images/MCG-logo-Positive.svg" alt="" class="navbar_logo"></a>
+          <nav role="navigation" class="navbar_menu is-mobile w-nav-menu">
+            <div class="navbar_menu-left is-mobile">
+              <a href="#" class="navbar_link is-mobile w-nav-link">Link One</a>
+              <a href="#" class="navbar_link is-mobile w-nav-link">Link Two</a>
+              <a href="#" class="navbar_link is-mobile w-nav-link">Link Three</a>
+              <div data-delay="300" data-hover="true" class="navbar_menu-dropdown is-mobile w-dropdown">
+                <div class="navbar_dropdown-toggle w-dropdown-toggle">
+                  <div>Link Four</div>
+                  <div class="dropdown-chevron w-embed"><svg width=" 100%" height=" 100%" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M2.55806 6.29544C2.46043 6.19781 2.46043 6.03952 2.55806 5.94189L3.44195 5.058C3.53958 4.96037 3.69787 4.96037 3.7955 5.058L8.00001 9.26251L12.2045 5.058C12.3021 4.96037 12.4604 4.96037 12.5581 5.058L13.4419 5.94189C13.5396 6.03952 13.5396 6.19781 13.4419 6.29544L8.17678 11.5606C8.07915 11.6582 7.92086 11.6582 7.82323 11.5606L2.55806 6.29544Z" fill="currentColor"></path>
+                    </svg></div>
+                </div>
+                <nav class="navbar_dropdown-list is-mobile w-dropdown-list">
+                  <div class="navbar_container">
+                    <div class="navbar_dropdown-content">
+                      <div class="navbar_dropdown-content-left">
+                        <div class="navbar_dropdown-link-list">
+                          <h4 class="text-size-small text-weight-semibold">Page group one</h4>
+                          <a href="#" class="navbar_dropdown-link w-inline-block">
+                            <div class="navbar_icon-holder">
+                              <div class="icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                                </svg></div>
+                            </div>
+                            <div class="navbar_item-text">
+                              <div class="text-weight-semibold">Page One</div>
+                              <p class="text-size-small hide-mobile-landscape">Lorem ipsum dolor sit amet consectetur elit</p>
+                            </div>
+                          </a>
+                          <a href="#" class="navbar_dropdown-link w-inline-block">
+                            <div class="navbar_icon-holder">
+                              <div class="icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                                </svg></div>
+                            </div>
+                            <div class="navbar_item-text">
+                              <div class="text-weight-semibold">Page Two</div>
+                              <p class="text-size-small hide-mobile-landscape">Lorem ipsum dolor sit amet consectetur elit</p>
+                            </div>
+                          </a>
+                          <a href="#" class="navbar_dropdown-link w-inline-block">
+                            <div class="navbar_icon-holder">
+                              <div class="icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                                </svg></div>
+                            </div>
+                            <div class="navbar_item-text">
+                              <div class="text-weight-semibold">Page Three</div>
+                              <p class="text-size-small hide-mobile-landscape">Lorem ipsum dolor sit amet consectetur elit</p>
+                            </div>
+                          </a>
+                          <a href="#" class="navbar_dropdown-link w-inline-block">
+                            <div class="navbar_icon-holder">
+                              <div class="icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                                </svg></div>
+                            </div>
+                            <div class="navbar_item-text">
+                              <div class="text-weight-semibold">Page Four</div>
+                              <p class="text-size-small hide-mobile-landscape">Lorem ipsum dolor sit amet consectetur elit</p>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="navbar_dropdown-link-list">
+                          <h4 class="text-size-small text-weight-semibold">Page group two</h4>
+                          <a href="#" class="navbar_dropdown-link w-inline-block">
+                            <div class="navbar_icon-holder">
+                              <div class="icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                                </svg></div>
+                            </div>
+                            <div class="navbar_item-text">
+                              <div class="text-weight-semibold">Page Five</div>
+                              <p class="text-size-small hide-mobile-landscape">Lorem ipsum dolor sit amet consectetur elit</p>
+                            </div>
+                          </a>
+                          <a href="#" class="navbar_dropdown-link w-inline-block">
+                            <div class="navbar_icon-holder">
+                              <div class="icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                                </svg></div>
+                            </div>
+                            <div class="navbar_item-text">
+                              <div class="text-weight-semibold">Page Six</div>
+                              <p class="text-size-small hide-mobile-landscape">Lorem ipsum dolor sit amet consectetur elit</p>
+                            </div>
+                          </a>
+                          <a href="#" class="navbar_dropdown-link w-inline-block">
+                            <div class="navbar_icon-holder">
+                              <div class="icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                                </svg></div>
+                            </div>
+                            <div class="navbar_item-text">
+                              <div class="text-weight-semibold">Page Seven</div>
+                              <p class="text-size-small hide-mobile-landscape">Lorem ipsum dolor sit amet consectetur elit</p>
+                            </div>
+                          </a>
+                          <a href="#" class="navbar_dropdown-link w-inline-block">
+                            <div class="navbar_icon-holder">
+                              <div class="icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                                </svg></div>
+                            </div>
+                            <div class="navbar_item-text">
+                              <div class="text-weight-semibold">Page Eight</div>
+                              <p class="text-size-small hide-mobile-landscape">Lorem ipsum dolor sit amet consectetur elit</p>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="navbar_dropdown-link-list">
+                          <h4 class="text-size-small text-weight-semibold">Page group three</h4>
+                          <a id="w-node-d7f45653-3f27-de3d-c288-4ded405341ef-40534099" href="#" class="navbar_dropdown-link w-inline-block">
+                            <div class="navbar_icon-holder">
+                              <div class="icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                                </svg></div>
+                            </div>
+                            <div class="navbar_item-text">
+                              <div class="text-weight-semibold">Page Nine</div>
+                              <p class="text-size-small hide-mobile-landscape">Lorem ipsum dolor sit amet consectetur elit</p>
+                            </div>
+                          </a>
+                          <a href="#" class="navbar_dropdown-link w-inline-block">
+                            <div class="navbar_icon-holder">
+                              <div class="icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                                </svg></div>
+                            </div>
+                            <div class="navbar_item-text">
+                              <div class="text-weight-semibold">Page Ten</div>
+                              <p class="text-size-small hide-mobile-landscape">Lorem ipsum dolor sit amet consectetur elit</p>
+                            </div>
+                          </a>
+                          <a href="#" class="navbar_dropdown-link w-inline-block">
+                            <div class="navbar_icon-holder">
+                              <div class="icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                                </svg></div>
+                            </div>
+                            <div class="navbar_item-text">
+                              <div class="text-weight-semibold">Page Eleven</div>
+                              <p class="text-size-small hide-mobile-landscape">Lorem ipsum dolor sit amet consectetur elit</p>
+                            </div>
+                          </a>
+                          <a href="#" class="navbar_dropdown-link w-inline-block">
+                            <div class="navbar_icon-holder">
+                              <div class="icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                                </svg></div>
+                            </div>
+                            <div class="navbar_item-text">
+                              <div class="text-weight-semibold">Page Twelve</div>
+                              <p class="text-size-small hide-mobile-landscape">Lorem ipsum dolor sit amet consectetur elit</p>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="navbar_dropdown-content-right">
+                        <div class="navbar_dropdown-content-wrapper z-index-1">
+                          <div class="navbar_dropdown-small-link-list">
+                            <h4 class="text-size-small text-weight-semibold">Page group four</h4>
+                          </div>
+                          <a href="#" class="navbar_dropdown-link-small">Link one</a>
+                          <a href="#" class="navbar_dropdown-link-small">Link two</a>
+                          <a href="#" class="navbar_dropdown-link-small">Link three</a>
+                          <a href="#" class="navbar_dropdown-link-small">Link four</a>
+                          <a href="#" class="navbar_dropdown-link-small">Link five</a>
+                        </div>
+                        <div class="navbar_dropdown-background-layer is-mobile"></div>
+                      </div>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            </div>
+            <div class="navbar_menu-right is-mobile">
+              <div class="margin-0 w-form">
+                <form id="wf-form-Car-selector-search" name="wf-form-Car-selector-search" data-name="Car selector search" method="get" data-wf-page-id="665227f0f5ab9f409773c375" data-wf-element-id="d7f45653-3f27-de3d-c288-4ded40534221">
+                  <div class="navbar_menu_button-wrapper">
+                    <div data-car-selector="trigger" class="navbar_menu-filters-button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="-0.5 -0.5 24 24" id="Car-2--Streamline-Sharp" width="100%" class="icon-1x1-xsmall">
+                        <desc></desc>
+                        <g id="car-2--transportation-travel-transport-car">
+                          <path id="Vector 3150" stroke="currentColor" d="M0.9583333333333334 18.208333333333336v-7.666666666666667h21.083333333333336v7.666666666666667H0.9583333333333334Z" stroke-width="2"></path>
+                          <path id="Vector 3151" stroke="currentColor" d="m4.791666666666667 2.875 -1.9166666666666667 7.666666666666667h17.25l-1.9166666666666667 -7.666666666666667H4.791666666666667Z" stroke-width="2"></path>
+                          <path id="Vector 3152" stroke="currentColor" d="M3.8333333333333335 14.375h2.875" stroke-width="2"></path>
+                          <path id="Vector 3155" stroke="currentColor" d="M19.166666666666668 14.375h-2.875" stroke-width="2"></path>
+                          <path id="Vector 3154" stroke="currentColor" d="M2.875 18.208333333333336v2.875" stroke-width="2"></path>
+                          <path id="Vector 3156" stroke="currentColor" d="M20.125 18.208333333333336v2.875" stroke-width="2"></path>
+                        </g>
+                      </svg></div>
+                    <div data-car-selector="modal" class="navbar_menu_filters-modal">
+                      <div class="filters6_form-header">
+                        <div class="filters6_heading">Filters</div>
+                        <a data-car-selector="close" href="#" class="filters6_modal-close-button w-inline-block"><img alt="" src="images/icon_close-modal.svg" class="filters6_modal-close-icon"></a>
+                      </div>
+                      <div class="filters6_filter-group-list">
+                        <div class="filters6_filter-group">
+                          <div class="filters6_filter-group-heading">
+                            <div>Årgang</div>
+                            <a fs-cmsfilter-field="IDENTIFIER" fs-cmsfilter-element="reset" href="#" class="button is-link w-inline-block">
+                              <div>Ryd</div>
+                            </a>
+                          </div>
+                          <div class="filters6_filter-options">
+                            <div class="filters6_list-wrapper">
+                              <div class="filters6_list">
+                                <div class="filters6_item"><select id="field-2" name="field-2" data-name="Field 2" fs-cmsfilter-field="IDENTIFIER" class="form_input is-select-input w-select">
+                                    <option value="">Vælg årgang</option>
+                                    <option value="Option One">Option One</option>
+                                    <option value="Option Two">Option Two</option>
+                                    <option value="Option Three">Option Three</option>
+                                  </select></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="filters6_filter-group">
+                          <div class="filters6_filter-group-heading">
+                            <div>Mærke</div>
+                            <a fs-cmsfilter-field="IDENTIFIER" fs-cmsfilter-element="reset" href="#" class="button is-link w-inline-block">
+                              <div>Ryd</div>
+                            </a>
+                          </div>
+                          <div class="filters6_filter-options">
+                            <div class="filters6_list-wrapper">
+                              <div class="filters6_list">
+                                <div class="filters6_item"><select id="field-2" name="field-2" data-name="Field 2" fs-cmsfilter-field="IDENTIFIER" class="form_input is-select-input w-select">
+                                    <option value="">Vælg mærke</option>
+                                    <option value="Option One">Option One</option>
+                                    <option value="Option Two">Option Two</option>
+                                    <option value="Option Three">Option Three</option>
+                                  </select></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="filters6_filter-group">
+                          <div class="filters6_filter-group-heading">
+                            <div>Model</div>
+                            <a fs-cmsfilter-field="IDENTIFIER" fs-cmsfilter-element="reset" href="#" class="button is-link w-inline-block">
+                              <div>Ryd</div>
+                            </a>
+                          </div>
+                          <div class="filters6_filter-options">
+                            <div class="filters6_list-wrapper">
+                              <div class="filters6_list">
+                                <div class="filters6_item"><select id="field-2" name="field-2" data-name="Field 2" fs-cmsfilter-field="IDENTIFIER" class="form_input is-select-input w-select">
+                                    <option value="">Vælg model</option>
+                                    <option value="Option One">Option One</option>
+                                    <option value="Option Two">Option Two</option>
+                                    <option value="Option Three">Option Three</option>
+                                  </select></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="filters6_filter-group last">
+                          <div class="filters6_filter-group-heading">
+                            <div>Udgave</div>
+                            <a fs-cmsfilter-field="IDENTIFIER" fs-cmsfilter-element="reset" href="#" class="button is-link w-inline-block">
+                              <div>Ryd</div>
+                            </a>
+                          </div>
+                          <div class="filters6_filter-options">
+                            <div class="filters6_list-wrapper">
+                              <div class="filters6_list">
+                                <div class="filters6_item"><select id="field-2" name="field-2" data-name="Field 2" fs-cmsfilter-field="IDENTIFIER" class="form_input is-select-input w-select">
+                                    <option value="">Vælg udgave</option>
+                                    <option value="Option One">Option One</option>
+                                    <option value="Option Two">Option Two</option>
+                                    <option value="Option Three">Option Three</option>
+                                  </select></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="filters6_modal-menu">
+                        <a fs-cmsfilter-element="reset" href="#" class="button is-link w-inline-block">
+                          <div>Ryd alle</div>
+                        </a><input type="submit" data-wait="" class="button is-small w-button" value="Søg">
+                      </div>
+                    </div>
+                    <div data-car-selector="overlay" class="navbar_menu-modal-background"></div>
+                  </div>
+                </form>
+                <div class="w-form-done">
+                  <div>Thank you! Your submission has been received!</div>
+                </div>
+                <div class="w-form-fail">
+                  <div>Oops! Something went wrong while submitting the form.</div>
+                </div>
+              </div><button data-search="trigger" class="navbar_menu-search-button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" id="Magnifying-Glass--Streamline-Sharp" width="100%" class="icon-1x1-xsmall">
+                  <desc></desc>
+                  <g id="magnifying-glass--glass-search-magnifying">
+                    <path id="Ellipse 7" stroke="currentColor" d="M1 11c0 2.6522 1.05357 5.1957 2.92893 7.0711C5.8043 19.9464 8.34784 21 11 21c2.6522 0 5.1957 -1.0536 7.0711 -2.9289C19.9464 16.1957 21 13.6522 21 11c0 -2.65216 -1.0536 -5.1957 -2.9289 -7.07107C16.1957 2.05357 13.6522 1 11 1 8.34784 1 5.8043 2.05357 3.92893 3.92893 2.05357 5.8043 1 8.34784 1 11Z" stroke-width="2"></path>
+                    <path id="Vector 196" stroke="currentColor" d="m18 18 5 5" stroke-width="2"></path>
+                  </g>
+                </svg></button><button class="navbar_menu_cart-button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" id="Shopping-Basket-2--Streamline-Sharp" width="100%" class="icon-1x1-xsmall">
+                  <desc></desc>
+                  <g id="shopping-basket-2--shopping-basket">
+                    <path id="Vector 2660" stroke="currentColor" d="M3.9818 22.1564L1.3091 10.3964H22.6909L20.0182 22.1564H3.9818Z" stroke-width="2"></path>
+                    <path id="Vector 2666" stroke="currentColor" d="M4.5164 10.3964L8.7927 1.8436" stroke-width="2"></path>
+                    <path id="Vector 2667" stroke="currentColor" d="M19.4836 10.3964L15.2073 1.8436" stroke-width="2"></path>
+                  </g>
+                </svg></button>
+            </div>
+          </nav>
+          <div class="navbar_menu-button w-nav-button">
+            <div class="menu-icon">
+              <div class="menu-icon_line-top"></div>
+              <div class="menu-icon_line-middle">
+                <div class="menu-icon_line-middle-inner"></div>
+              </div>
+              <div class="menu-icon_line-bottom"></div>
+            </div>
+          </div>
+        </div>
+        <form action="/search" data-search="component" class="navbar_search-component w-form">
+          <div data-search="input" class="navbar_search_container"><input class="navbar_search_input w-input" autofocus="true" maxlength="256" name="query" placeholder="Find alting" type="search" id="search" required=""><input type="submit" class="navbar_search_button w-button" value="Søg"></div>
+          <div data-search="overlay" class="navbar_search_overlay"></div>
+        </form>
+      </div>
     </div>
     <div class="cart-drawer">
       <div class="cart-drawer_overlay"></div>
