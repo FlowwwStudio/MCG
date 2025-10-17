@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Thu Oct 16 2025 10:33:52 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Fri Oct 17 2025 07:53:17 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="664cbc5aa1e1d591d06b0c16" data-wf-site="60e2e9c664000d7cba8314a6">
 <head>
   <meta charset="utf-8">
@@ -28,23 +28,32 @@
   <script>
   document.addEventListener('DOMContentLoaded', function () {
     // Car selector elements
-    const carSelectorButton = document.querySelector('[data-car-selector="trigger"]');
-    const carSelectorModal = document.querySelector('[data-car-selector="modal"]');
-    const carSelectorOverlay = document.querySelector('[data-car-selector="overlay"]');
-    const carSelectorClose = document.querySelector('[data-car-selector="close"]'); // Added close button
+    const carSelectorButtons = document.querySelectorAll('[data-car-selector="trigger"]');
+    const carSelectorModals = document.querySelectorAll('[data-car-selector="modal"]');
+    const carSelectorOverlays = document.querySelectorAll('[data-car-selector="overlay"]');
+    const carSelectorCloses = document.querySelectorAll('[data-car-selector="close"]'); // Added close button
     function openCarSelector() {
-      carSelectorModal?.classList.add('is-visible');
-      carSelectorOverlay?.classList.add('is-visible');
+      carSelectorModals.forEach(modal => modal.classList.add('is-visible'));
+      carSelectorOverlays.forEach(overlay => overlay.classList.add('is-visible'));
     }
     function closeCarSelector() {
-      carSelectorModal?.classList.remove('is-visible');
-      carSelectorOverlay?.classList.remove('is-visible');
+      carSelectorModals.forEach(modal => modal.classList.remove('is-visible'));
+      carSelectorOverlays.forEach(overlay => overlay.classList.remove('is-visible'));
     }
-    carSelectorButton?.addEventListener('click', openCarSelector);
-    carSelectorOverlay?.addEventListener('click', closeCarSelector);
-    carSelectorClose?.addEventListener('click', closeCarSelector); // Added close button event listener
+    // Add event listeners to all car selector buttons
+    carSelectorButtons.forEach(button => {
+      button.addEventListener('click', openCarSelector);
+    });
+    // Add event listeners to all car selector overlays
+    carSelectorOverlays.forEach(overlay => {
+      overlay.addEventListener('click', closeCarSelector);
+    });
+    // Add event listeners to all car selector close buttons
+    carSelectorCloses.forEach(closeBtn => {
+      closeBtn.addEventListener('click', closeCarSelector);
+    });
     // Search elements
-    const searchButton = document.querySelector('[data-search="trigger"]');
+    const searchButtons = document.querySelectorAll('[data-search="trigger"]');
     const searchComponent = document.querySelector('[data-search="component"]');
     const searchInput = document.querySelector('[data-search="input"]');
     const searchOverlay = document.querySelector('[data-search="overlay"]');
@@ -64,10 +73,13 @@
       searchInput?.classList.remove('is-visible');
       searchOverlay?.classList.remove('is-visible');
     }
-    searchButton?.addEventListener('click', openSearch);
+    // Add event listeners to all search buttons
+    searchButtons.forEach(button => {
+      button.addEventListener('click', openSearch);
+    });
     searchOverlay?.addEventListener('click', closeSearch);
     // Cart elements
-    const navbarButton = document.querySelector('.navbar8_menu_cart-button');
+    const navbarButtons = document.querySelectorAll('.navbar_menu_cart-button');
     const cartDrawer = document.querySelector('.cart-drawer');
     const cartDrawerOverlay = document.querySelector('.cart-drawer_overlay');
     const cartDrawerInnerOuter = document.querySelector('.cart-drawer__inner--outer');
@@ -82,14 +94,17 @@
       cartDrawerOverlay?.classList.remove('is-visible');
       cartDrawerInnerOuter?.classList.remove('is-visible');
     }
-    navbarButton?.addEventListener('click', openCart);
+    // Add event listeners to all navbar cart buttons
+    navbarButtons.forEach(button => {
+      button.addEventListener('click', openCart);
+    });
     cartDrawerClose?.addEventListener('click', closeCart);
     // Unified ESC key handler for all modals/drawers
     document.addEventListener('keydown', function (event) {
       if (event.key === 'Escape') {
         if (cartDrawer?.classList.contains('is-visible')) {
           closeCart();
-        } else if (carSelectorModal?.classList.contains('is-visible')) {
+        } else if (carSelectorModals.length > 0 && carSelectorModals[0].classList.contains('is-visible')) {
           closeCarSelector();
         } else if (searchComponent?.classList.contains('is-visible')) {
           closeSearch();
@@ -119,6 +134,7 @@
         }
       });
     });
+  });
   });
 </script>
 </body>
